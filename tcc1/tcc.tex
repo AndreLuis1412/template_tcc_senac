@@ -63,7 +63,7 @@
 % ---------------------------------------------------------------
 % INFORMAÇÕES DO DOCUMENTO
 % ---------------------------------------------------------------
-\titulo{Título do Trabalho de Conclusão de Curso} %Trocar titulo
+\titulo{Otimização Inteligente de Rotas no Senac Considerando Qualidade de Wi-Fi: Uma Comparação entre Algoritmo de Grafos e Inteligência Artificial} %Trocar titulo
 \autor{
 André Luis Ferreira de Oliveira \\
 Edinaldo Matias dos Santos Junior}
@@ -165,9 +165,26 @@ A introdução deve apresentar o tema do trabalho de forma clara e objetiva, sit
 \section{Contexto}
 \label{sec:contexto}
 
-Apresente o cenário que originou o problema, ressaltando fatos, indicadores e lacunas identificadas na área de estudo. O contexto deve situar o leitor sobre o estado atual do tema, mostrando a relevância do assunto para a Computação e para a sociedade.
+%Apresente o cenário que originou o problema, ressaltando fatos, indicadores e lacunas identificadas na área de estudo. O contexto deve situar o leitor sobre o estado atual do tema, mostrando a relevância do assunto para a Computação e para a sociedade.
 
-Descreva o ambiente ou domínio em que o problema ocorre, utilizando dados e referências que comprovem a existência do problema. Explique quem são os principais afetados e quais são as consequências de não resolvê-lo.
+%Descreva o ambiente ou domínio em que o problema ocorre, utilizando dados e referências que comprovem a existência do problema. Explique quem são os principais afetados e quais são as consequências de não resolvê-lo.
+
+O tema surge ao observarmos a baixa conectividade de Wi-Fi no campus do Senac Santo Amaro e imaginar uma aplicação
+ com algoritmos de grafos que otimize a transição entre pontos do senac, garantindo uma boa conectividade com 
+ Wi-Fi em todo o trajeto
+A ideia é ultilizar um algoritmo de grafos otimizado para encontrar a menor rota entre dois pontos, tendo como peso
+das arestas a conexão Wi-Fi e a distância entre os vertices.
+Após uma coleta de dados, será treinado um modelo de Inteligência Artificial, que fará previsões da melhor 
+rota possível, dado um ponto de origem e um ponto de destino.
+Por fim e não menos importante, será realizada uma comparação entre o algoritmo de grafos otimizado e a 
+Inteligência Artificial, com base nos seguintes indicadores:\newline
+- Passos/metros \newline
+- dBm (decibel-miliwatt)\newline
+- Número de pontos com Wi-Fi fraco \newline
+(Conta quantos pontos da rota têm sinal abaixo de um limite que será definido).\newline
+- Tempo de execução dos dois métodos (Segundos)\newline
+- Variância do sinal Wi-Fi.\newline
+- Similaridade entre rotas (Mede quanto a rota da IA se aproxima da rota ótima do algoritmo em porcentagem).\newline
 
 \vspace{0.3cm}
 \noindent\fbox{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
@@ -210,8 +227,22 @@ A revisão bibliográfica não consiste em simplesmente listar os trabalhos enco
 Explicite por que resolver esse problema é importante. A justificativa deve abordar:
 
 \begin{itemize}
-    \item \textbf{Relevância acadêmica}: como este trabalho contribui para o avanço do conhecimento na área;
-    \item \textbf{Relevância prática/profissional}: quais benefícios práticos a solução trará para usuários, organizações ou a sociedade;
+    \item \textbf{Relevância acadêmica}: O fato de que otimização de rotas é um problema resolvido de modo geral
+    com algoritmos de grafo, permite explorar uma nova abordagem pouco implementeda, que é a utilização de frequência
+    de Wi-Fi como peso para a decisão de ir ao próximo vertice e a ultilização de IA treinada para decidir a melhor rota,
+    sem a dependência um algoritmo, usado convencionalmente quando tratamos de otimização de rotas.
+
+    \item \textbf{Relevância prática/profissional}: A solução proposta traz benefícios diretos para usuários e 
+    instituições ao permitir a identificação e utilização de rotas com melhor qualidade de conexão Wi-Fi dentro 
+    do campus. Para os usuários, isso possibilita uma experiência mais estável ao acessar conteúdos online, 
+    participar de aulas remotas, utilizar sistemas acadêmicos e realizar atividades que dependem de conectividade 
+    contínua.\newline
+
+    Para a instituição, a ferramenta pode servir como apoio na gestão da infraestrutura de rede, 
+    auxiliando na identificação de áreas com baixa cobertura e orientando investimentos em melhorias. 
+    Além disso, a aplicação pode contribuir para a otimização do uso dos espaços físicos, promovendo 
+    maior eficiência no deslocamento de alunos e colaboradores.
+
     \item \textbf{Lacuna identificada}: o que ainda não foi resolvido ou explorado suficientemente pelos trabalhos existentes.
 \end{itemize}
 

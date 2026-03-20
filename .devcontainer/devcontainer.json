@@ -1,0 +1,14 @@
+{
+  "name": "TCC LaTeX FULL + ABNT",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+"postCreateCommand": "sudo apt-get update && sudo apt-get install -y texlive-full texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra texlive-lang-portuguese texlive-bibtex-extra biber git-lfs && git lfs install",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop"
+      ]
+    }
+  }
+}
